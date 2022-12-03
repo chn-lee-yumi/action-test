@@ -20,8 +20,8 @@ jobs:
       
       - name: Init Env
         run: |
-          iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
-          iptables -I FORWARD -j ACCEPT
+          sudo iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+          sudo iptables -I FORWARD -j ACCEPT
           pip3 install flask
           pip3 install flask_login
           nohup python3 main.py &
