@@ -9,7 +9,10 @@ jobs:
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: chn-lee-yumi/lxd_cluster_panel@master
+      - name: Checkout
+        uses: actions/checkout@v3
+        with: 
+          repository: chn-lee-yumi/lxd_cluster_panel@master
       
       # - name: Deploy LXD
 
