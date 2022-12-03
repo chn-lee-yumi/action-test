@@ -28,12 +28,9 @@ jobs:
       
       - name: install cloudflare
         run: |
-          cd /home/runner/tunnel
           aria2c "https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-amd64.deb"
           sudo dpkg -i cloudflared-linux-amd64.deb
           nohup cloudflared tunnel --url 0.0.0.0:8080 &
-          sleep 10
-          cat nohup.out
           
       - name: enable debug interface
         uses: chn-lee-yumi/debugger-action@master
