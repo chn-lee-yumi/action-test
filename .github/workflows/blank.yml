@@ -12,7 +12,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with: 
-          repository: chn-lee-yumi/lxd_cluster_panel@master
+          repository: chn-lee-yumi/lxd_cluster_panel
       
       # - name: Deploy LXD
 
